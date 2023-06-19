@@ -5,15 +5,25 @@ class Calculator {
               public static void main(String args[]){
 	
 	// Here we declare variables for our calculator 
-	String name;
+	String firstName, lastName;
 	char operator;
 	int number1, number2;
 	double result;
+	String name = firstName + lastName
 
 	//create an object of scanner class
 	Scanner input = new Scanner(System.in);
 
+	//At this point we want to request user first name 
+	System.out.println("First Name");
+	firstName = input.next().String();
+
+	//At this point we want to request user last name 
+	System.out.println("Last Name");
+	lastName = input.next().String();
+
 	//At this point we want to request user to choose an operator 
+	System.out.println("Welcome " +name "!");
 	System.out.println("Choose an operator: +, -, *, or /");
 	operator = input.next().charAt(0);
 
