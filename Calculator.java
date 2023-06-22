@@ -1,4 +1,9 @@
 // add "import" statement from java
+/*  
+Obi is a boy.
+Simbi is a girl.
+
+*/
 import java.util.Scanner;
 
 class Calculator {
@@ -11,29 +16,32 @@ class Calculator {
 	char operator;
 	double number1, number2;
 	double result;
-	String fullName = firstName + lastName;
+	//String fullName = firstName + lastName;
 
 	//create an object of scanner class
 	Scanner input = new Scanner(System.in);
 	
-	while (true) {
-
 	//At this point we want to request user first name 
 	System.out.println("First Name");
 	firstName = input.next();
 
 	//At this point we want to request user last name 
 	System.out.println("Last Name");
-	lastName = input.nextLine();
+	lastName = input.next();
+	
+	System.out.println(" ");
+	System.out.println("Welcome "+firstName +lastName + "!");
+	
+	while (true) {
 
 	//At this point we want to request user to choose an operator 
-	System.out.println("Welcome " +fullName + "!");
-	System.out.println("Choose an operator: +, -, *, or /");
+	System.out.println(" ");
+	System.out.println("Choose an operator: +, -, *,  / or");
 	System.out.println("Enter E to exit");
 
 	operator = input.next().charAt(0);
 	if (operator == 'E'){
-	System.out.println("Thank you for using our Calculator! See you soon.");
+	System.out.println( "Thank you for using our Calculator, " + firstName +"! See you soon.");
 	
 		break;
 	}
@@ -79,7 +87,7 @@ class Calculator {
 	
 	//condition to display incorrect operator 
 	else {
-		System.out.println("Kindly confirm the operator you choose exist");
+		System.out.println(firstName +" Kindly confirm the operator you choose exist");
 	}
 	}
 
