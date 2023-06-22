@@ -16,7 +16,7 @@ class Calculator {
 	char operator;
 	double number1, number2;
 	double result;
-	//String fullName = firstName + lastName;
+	
 
 	//create an object of scanner class
 	Scanner input = new Scanner(System.in);
@@ -29,8 +29,9 @@ class Calculator {
 	System.out.println("Last Name");
 	lastName = input.next();
 	
+	String fullName = firstName + lastName;
 	System.out.println(" ");
-	System.out.println("Welcome "+firstName +lastName + "!");
+	System.out.println("Welcome "+fullName + "!");
 	
 	while (true) {
 
@@ -57,7 +58,7 @@ class Calculator {
 	// checking if the operstor is "+"
 	if (operator == '+') {
 		result = number1 + number2;
-		System.out.println(number1 + "+" + number2 + "=" +result);
+		System.out.println(number1 + " + " + number2 + " = " +result);
 		
 	}
 	
@@ -65,7 +66,7 @@ class Calculator {
 	// checking if the operstor is "-"
 	else if (operator == '-') {
 		result = number1 - number2;
-		System.out.println(number1 + "-" + number2 + "=" +result);
+		System.out.println(number1 + " - " + number2 + " = " +result);
 		
 	}
 
@@ -73,7 +74,7 @@ class Calculator {
 	// checking if the operstor is "*"
 	else if (operator == '*') {
 		result = number1*number2;
-		System.out.println(number1 + "*" + number2 + "=" +result);
+		System.out.println(number1 + " * " + number2 + " = " +result);
 		
 	}
 	
@@ -81,7 +82,7 @@ class Calculator {
 	// checking if the operstor is "/"
 	else if (operator == '/') {
 		result =  number1 / number2;
-		System.out.println(number1 + "/" + number2 + "=" +result);
+		System.out.println(number1 + " / " + number2 + " = " +result);
 		
 	}
 	
